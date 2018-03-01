@@ -1,6 +1,6 @@
 # Summary
 
-## 第一章 前言ss
+## 第一章 前言
 
 * [Introduction](README.md)
 * [First Chapter](chapter1.md)

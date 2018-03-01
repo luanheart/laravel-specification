@@ -2,7 +2,7 @@
 
 ## 第一章 前言
 
-* [Introduction](chapter1/README.md)
+* [1.1 关于规范](chapter1/README.md)
 
 ## 开发环境搭建
 

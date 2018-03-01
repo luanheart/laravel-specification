@@ -2,7 +2,7 @@
 
 ## 第一章 前言
 
-* [1.1 关于规范](chapter1/1.1 关于规范.md)
+* [1.1 关于规范](chapter1/README.md)
 * [1.2 能愿动词](chapter1/1.2.md)
 * [1.3 写作规范](chapter1/writing-convention.md)
 

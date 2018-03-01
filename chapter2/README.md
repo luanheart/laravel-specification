@@ -10,7 +10,11 @@
 
 ## Production 生产环境
 
+一般由运维配置
+
 ## Local 开发环境
+
+开发中台项目时使用中台提供的开发环境，其他项目 **必须** 使用 **Homestead** 作为应用程序运行的环境。请阅读 [为什么必须使用 Homestead 来开发 Laravel 应用？](https://laravel-china.org/articles/4668/why-do-you-have-to-use-homestead-to-develop-laravel-applications) 。
 
 ## Staging 线上测试环境
 

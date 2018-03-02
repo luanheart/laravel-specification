@@ -18,3 +18,11 @@
 ```
 CDN_DOMAIN=cdndomain.com
 ```
+
+`config/app.php` 文件设置：
+
+```
+'cdn_domain' => env('CDN_DOMAIN', null),
+```
+
+在此统一规定：所有程序配置信息 **必须** 通过 `config()` 来读取，所有的 `.env` 配置信息 **必须** 通过 `config()` 来读取，绝不 在配置文件以外的范围使用 `env()`。

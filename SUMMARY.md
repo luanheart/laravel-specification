@@ -15,6 +15,7 @@
 ## 第三章 编码规范
 
 * [3.1 代码风格](chapter3/code-style.md)
+* [3.2 路由](chapter3/router.md)
 
 
 

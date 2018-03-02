@@ -15,6 +15,6 @@
 
 `.env` 文件设置：
 
-```
+```````````
 CDN_DOMAIN=cdndomain.com
 ```

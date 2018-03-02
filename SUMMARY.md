@@ -9,5 +9,5 @@
 ## 第二章 开发环境
 
 * [2.1 开发环境](chapter2/README.md)
-* [2.2 开发环境搭建 - MacOS](chapter2/development-environment.md.md)
+* [2.2 开发环境搭建](chapter2/development-environment.md)
 

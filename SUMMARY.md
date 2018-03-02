@@ -8,6 +8,6 @@
 
 ## 第二章 项目规范
 
-* [2.1 环境](chapter2/environment.md)
+* [2.1 环境说明](chapter2/environment.md)
 * [2.2 开发环境](chapter2/development-environment.md)
 

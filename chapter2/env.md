@@ -14,6 +14,7 @@
 ## 代码示例
 
 `.env` 文件设置：
+
 ```
 CDN_DOMAIN=cdndomain.com
 ```

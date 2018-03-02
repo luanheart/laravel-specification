@@ -8,6 +8,6 @@
 
 ## 第二章 项目规范
 
-* [2.1 开发环境](chapter2/README.md)
+* [2.1 Laravel 版本选择](chapter2/README.md)
 * [2.2 开发环境搭建](chapter2/development-environment.md)
 

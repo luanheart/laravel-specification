@@ -43,3 +43,9 @@ class Model extends EloquentModel
 - 数据库表主键 **必须** 为「id」
 - 数据库表外键 **必须** 为「resource_id」，如：`user_id`, `post_id`
 - 数据模型变量 **必须** 为「resource_id」，如：`$user_id`, `$post_id`
+
+### 利用 Trait 来扩展数据模型
+
+有时候数据模型里的代码会变得很臃肿，应该 利用 Trait 来精简逻辑代码量，提高可读性
+
+存放于文件夹：`app/Models/Traits` 文件夹中。

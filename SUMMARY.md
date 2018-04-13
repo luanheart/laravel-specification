@@ -18,20 +18,8 @@
 * [3.2 路由](chapter3/router.md)
 * [3.3 数据模型](chapter3/data-model.md)
 * [3.4 控制器](chapter3/controller.md)
-* [3.5 视图](chapter3/view.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
+* [3.5 表单验证](chapter3/form-validation.md)
+* [3.6 Artisan 命令行](chapter3/artisan-command-line.md)
 
 
 

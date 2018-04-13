@@ -17,6 +17,17 @@
 * [3.1 代码风格](chapter3/code-style.md)
 * [3.2 路由](chapter3/router.md)
 * [3.3 数据模型](chapter3/data-model.md)
+* [3.4 控制器](chapter3/controller.md)
+* [3.5 视图](chapter3/view.md)
+
+
+
+
+
+
+
+
+
 
 
 

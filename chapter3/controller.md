@@ -1,5 +1,9 @@
 ## 控制器
 
+### 资源控制器
+
+**必须** 优先使用 [Restful 资源控制器](http://d.laravel-china.org/docs/5.5/controllers#restful-resource-controllers) 。
+
 ### 单数 or 复数？
 
 必须 使用资源的复数形式，如：

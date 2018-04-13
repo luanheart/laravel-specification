@@ -22,5 +22,3 @@
 * [3.6 Artisan 命令行](chapter3/artisan-command-line.md)
 
 
-
-

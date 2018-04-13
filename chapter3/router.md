@@ -43,9 +43,118 @@ Route::resource('photos', 'PhotosController', ['only' => ['index', 'show']]);
 资源路由路由 URI 必须 使用复数形式，如：
 
 - `/photos/create`
-/photos/{photo}
+- `/photos/{photo}`
+
 错误的例子如：
 
-/photo/create
-/photo/{photo}
+- `/photo/create`
+- `/photo/{photo}`
 
+### 路由模型绑定
+
+在允许使用路由 [模型绑定](http://d.laravel-china.org/docs/5.5/routing#route-model-binding) 的地方 **必须** 使用。
+
+模型绑定代码 必须 放置于 `app/Providers/RouteServiceProvider.php` 文件的 `boot` 方法中：
+
+
+``` php
+    public function boot()
+    {
+        Route::bind('user_name', function ($value) {
+            return User::where('name', $value)->first();
+        });
+
+        Route::bind('photo', function ($value) {
+            return Photo::find($value);
+        });
+
+        parent::boot();
+    }
+```
+
+### 全局路由器参数
+
+出于安全考虑，**应该** 使用全局路由器参数限制，详见 [文档](http://d.laravel-china.org/docs/5.5/routing#%E5%85%A8%E5%B1%80%E9%99%90%E5%88%B6)。
+
+必须 在 `RouteServiceProvider` 文件的 `boot` 方法里定义模式：
+
+
+``` php
+/**
+ * 定义你的路由模型绑定，模式过滤器等。
+ *
+ * @param  \Illuminate\Routing\Router  $router
+ * @return void
+ */
+public function boot(Router $router)
+{
+    $router->pattern('id', '[0-9]+');
+
+    parent::boot($router);
+}
+```
+
+模式一旦被定义，便会自动应用到所有使用该参数名称的路由上：
+
+
+``` php
+Route::get('users/{id}', 'UsersController@show');
+Route::get('photos/{id}', 'PhotosController@show');
+```
+
+只有在 `id` 为数字时，才会路由到控制器方法中，否则 404 错误。
+
+### 路由命名
+
+除了 `resource` 资源路由以外，其他所有路由都 **必须** 使用 `name` 方法进行命名。
+
+必须 使用『资源前缀』作为命名规范，如下的 `users.follow`，资源前缀的值是 `users.`：
+
+
+``` php
+Route::post('users/{id}/follow', 'UsersController@follow')->name('users.follow');
+```
+
+### 获取 URL
+
+获取 URL **必须** 遵循以下优先级：
+
+1. `$model->link()`
+2. `route` 方法
+3. `url` 方法
+
+在 Model 中创建 link() 方法：
+
+
+```
+public function link($params = [])
+{
+    $params = array_merge([$this->id], $params);
+    return route('models.show', $params);
+}
+```
+
+
+所有单个模型数据链接使用：
+
+
+```
+$model->link();
+
+// 或者添加参数
+$model->link($params = ['source' => 'list'])
+```
+
+『单个模型 URI』经常会发生变化，这样做将会让程序更加灵活。
+
+除了『单个模型 URI』，其他路由 必须 使用 route 来获取 URL：
+
+```
+$url = route('profile', ['id' => 1]);
+```
+
+无法使用 route 的情况下，可以 使用 url 方法来获取 URL：
+
+```
+url('profile', [1]);
+```
